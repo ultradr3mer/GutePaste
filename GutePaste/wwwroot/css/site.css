@@ -16,3 +16,19 @@ body {
 .navbar {
   padding: 0;
 }
+
+.html-duration-picker-input-controls-wrapper .caret.caret-up {
+  border-color: transparent transparent #fff transparent !important;
+}
+
+.html-duration-picker-input-controls-wrapper .caret.caret-down {
+  border-color: #fff transparent transparent transparent !important;
+}
+
+.html-duration-picker-input-controls-wrapper .scroll-btn {
+  background: transparent !important;
+}
+
+.countdown {
+  font-family: 'Inconsolata', monospace;
+}

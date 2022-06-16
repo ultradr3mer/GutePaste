@@ -14,4 +14,9 @@
     <None Include="compilerconfig.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\html-duration-picker\" />
+    <Folder Include="wwwroot\lib\jquery-countdown\" />
+  </ItemGroup>
+
 </Project>

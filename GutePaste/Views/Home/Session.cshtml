@@ -1,0 +1,27 @@
+﻿@{
+  ViewData["Title"] = "Session";
+}
+@model SessionModel
+
+<div class="row justify-content-center">
+  <div class="col-auto">
+    <div style="width: 400px; max-width: 100%;">
+      <div id="countdown-card" class="card bg-medium m-5">
+        <h5 class="card-header">Session</h5>
+        <div class="card-body">
+          <h5 class="card-title">N&#228;chste Schepperung in</h5>
+          <h6 id="clock" class="countdown text-center"></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+<script src="~/lib/jquery-countdown/jquery.countdown.min.js"></script>
+<script>
+  var final_date = "@Model.NextOccurence.ToString("yyyy\\/MM\\/dd HH:mm:ss")";
+  </script>
+<script src="~/lib/html-duration-picker/html-duration-picker.min.js"></script>
+<script src="~/js/session.js"></script>
+}

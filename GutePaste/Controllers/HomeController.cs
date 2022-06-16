@@ -1,4 +1,5 @@
-﻿using GutePaste.Models;
+﻿using GutePaste.Extensions;
+using GutePaste.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,11 +14,43 @@ namespace GutePaste.Controllers
       _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult Index()
     {
-      return View();
+      var model = new StartModel() { Interval = "00:15:00" };
+
+      return View(model);
     }
 
+    [HttpGet(nameof(Start))]
+    public IActionResult Start(StartModel model)
+    {
+      if (ModelState.IsValid)
+      {
+        return this.RedirectToAction(nameof(Session), new { Start = DateTime.UtcNow.ToUnixTimeStamp(), Interval = TimeSpan.Parse(model.Interval).TotalSeconds });
+      }
+
+      return View(nameof(Index), model);
+    }
+
+    [HttpGet(nameof(Session))]
+    public IActionResult Session(long start, int interval)
+    {
+      var startDateTime = DateTimeExtensions.FromUnixTimeStamp(start);
+      var intervalSpan = TimeSpan.FromSeconds(interval);
+
+      var now = DateTime.UtcNow;
+
+      var duration = now - startDateTime;
+      var nextIntervalNumber = Math.Ceiling(duration / intervalSpan);
+      var nextOccurence = startDateTime + intervalSpan * nextIntervalNumber;
+
+      var model = new SessionModel() { Start = startDateTime.ToLocalTime(), Interval = intervalSpan, NextOccurence = nextOccurence.ToLocalTime() };
+
+      return View(model);
+    }
+
+    [HttpGet]
     public IActionResult Privacy()
     {
       return View();
