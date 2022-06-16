@@ -45,7 +45,7 @@ namespace GutePaste.Controllers
       var nextIntervalNumber = Math.Ceiling(duration / intervalSpan);
       var nextOccurence = startDateTime + intervalSpan * nextIntervalNumber;
 
-      var model = new SessionModel() { Start = startDateTime.ToLocalTime(), Interval = intervalSpan, NextOccurence = nextOccurence.ToLocalTime() };
+      var model = new SessionModel() { Start = startDateTime.ToLocalTime().AddHours(2), Interval = intervalSpan, NextOccurence = nextOccurence.ToLocalTime().AddHours(2) };
 
       return View(model);
     }
