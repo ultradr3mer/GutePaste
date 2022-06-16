@@ -1,18 +1,18 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
-  margin-bottom: 60px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo-text {
+  font-family: Signika Negative;
+  font-size: 1.75rem;
+}
+
+.navbar {
+  padding: 0;
 }
