@@ -17,7 +17,7 @@ namespace GutePaste.Controllers
     [HttpGet]
     public IActionResult Index()
     {
-      var model = new StartModel() { Interval = "00:15:00" };
+      var model = new StartModel() { Interval = "00:30:00" };
 
       return View(model);
     }

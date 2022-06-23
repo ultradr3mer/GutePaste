@@ -5,29 +5,37 @@
 
 <div class="row justify-content-center">
   <div class="col-auto">
-    <div style="width: 400px; max-width: 100%;">
-      <div class="card bg-medium m-5">
-        <h5 class="card-header">Session Starten</h5>
+    <div style="width: 600px; max-width: 100%;">
+      <div class="card bg-medium mt-5">
+        <img class="quotation-img" src="~/img/quotation.svg" />
+        <div class="card-header">
+          <div class="row mt-2">
+            <div class="col-auto">
+              <img class="testemonial-img" src="~/img/unknown.jpg" alt="">
+            </div>
+            <div class="col">
+              <h4>Lolstick</h4>
+              <p class="fst-italic">Verified Connoisseur des Pastens</p>
+            </div>
+          </div>
+        </div>
         <div class="card-body">
+          <div class="mt-4 mb-4">
+            <h1 class="font-italic font-smooch text-primary text-center" style="font-size:4.5rem;">“Paste gut alles gut”</h1>
+          </div>
+        </div>
+        <div class="card-footer">
           <form method="get">
             <div class="row">
               <span asp-validation- class="text-danger"></span>
             </div>
-            <div class="row mb-2 justify-content-center">
-              <label for="Duration" class="col col-md-6 col-form-label">Schepperinterval</label>
-              <div class="col col-md-6">
-                <input class="html-duration-picker form-control bg-dark border-0 text-white float-end" style="max-width: 100px;" asp-for="Interval">
+            <div class="row mb-2 row-cols-lg-auto g-3 align-items-center justify-content-center">
+                <label class="col-12 col-form-label" for="Duration">Schepperinterval</label>
+              <div class="col-12">
+                <input class="html-duration-picker form-control bg-dark border-0 text-white" style="max-width: 100px;" asp-for="Interval">
                 <span asp-validation-for="Interval" class="text-danger"></span>
               </div>
-            </div>
-            @* <div class="row mb-2">
-              <label for="Color" class="col col-md-6 col-form-label">Farbe</label>
-              <div class="col col-md-6">
-              <input type="color" class="form-control-color btn btn-dark" asp-for="Color" name="color" value="#e040fb">
-              </div>
-              </div>*@
-            <div class="row justify-content-end">
-              <div class="col-auto">
+              <div class="col-12 align-items-center">
                 <button class="btn btn-primary" asp-controller="home" asp-action="start" type="submit">Start <i class="bi bi-arrow-right"></i></button>
               </div>
             </div>

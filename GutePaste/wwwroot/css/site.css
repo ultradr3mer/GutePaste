@@ -32,3 +32,21 @@ body {
 .countdown {
   font-family: 'Inconsolata', monospace;
 }
+
+.testemonial-img {
+  border-radius: 50%;
+  width: 4rem;
+  border: 2px solid #cec5c5;
+}
+
+.quotation-img {
+  position: absolute;
+  right: .5rem;
+  top: .5rem;
+  float: right;
+  width: 3rem;
+}
+
+.font-smooch {
+  font-family: Smooch
+}
