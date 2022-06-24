@@ -50,3 +50,7 @@ body {
 .font-smooch {
   font-family: Smooch
 }
+
+.carousel-control-prev, .carousel-control-next {
+  width: 8%;
+}

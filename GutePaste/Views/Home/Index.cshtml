@@ -5,7 +5,7 @@
 
 <div class="row justify-content-center">
   <div class="col-auto">
-    <div style="width: 600px; max-width: 100%;">
+    <div style="width: 700px; max-width: 100%; ">
       <div class="card bg-medium mt-5">
         <img class="quotation-img" src="~/img/quotation.svg" />
         <div class="card-header">
@@ -20,8 +20,31 @@
           </div>
         </div>
         <div class="card-body">
-          <div class="mt-4 mb-4">
-            <h1 class="font-italic font-smooch text-primary text-center" style="font-size:4.5rem;">“Paste gut alles gut”</h1>
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner" style="height:200px;">
+              <div class="carousel-item h-100 active">
+                <div class="d-flex h-100 w-100 justify-content-center align-items-center">
+                  <h1 class="font-italic font-smooch text-primary text-center" style="font-size:4.5rem;">“Paste gut alles gut”</h1>
+                </div>
+              </div>
+              <div class="carousel-item h-100">
+                <div class="d-flex h-100 w-100 justify-content-center align-items-center">
+                  <h1 class="font-italic font-smooch text-primary text-center text-middle" style="font-size:3.2rem;">“Nichts geht über gute Paste”</h1>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
         <div class="card-footer">
@@ -30,12 +53,12 @@
               <span asp-validation- class="text-danger"></span>
             </div>
             <div class="row mb-2 row-cols-lg-auto g-3 align-items-center justify-content-center">
-                <label class="col-12 col-form-label" for="Duration">Schepperinterval</label>
               <div class="col-12">
+                <label for="Duration" class="me-2">Schepperinterval</label>
                 <input class="html-duration-picker form-control bg-dark border-0 text-white" style="max-width: 100px;" asp-for="Interval">
                 <span asp-validation-for="Interval" class="text-danger"></span>
               </div>
-              <div class="col-12 align-items-center">
+              <div class="col-12 d-flex justify-content-end">
                 <button class="btn btn-primary" asp-controller="home" asp-action="start" type="submit">Start <i class="bi bi-arrow-right"></i></button>
               </div>
             </div>
