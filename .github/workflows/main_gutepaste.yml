@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'gutepaste'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0B307F50791E4FCEA4B28D501D3AA838 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CEB78157DA474DCF8922C973B2EC7F5F }}
           package: .
